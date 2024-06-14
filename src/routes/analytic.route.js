@@ -1,9 +1,10 @@
 import { Router } from "express";
-import {getAnalyticData} from '../controllers/analytic.controller.js'
+import { getAnalyticData, getFilterAnalyticData } from '../controllers/analytic.controller.js'
 
 const router = Router()
 
 router.route('/').get(getAnalyticData)
+router.route('/getFilterData').get(getFilterAnalyticData)
 
 
 export default router
